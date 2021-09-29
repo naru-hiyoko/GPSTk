@@ -57,8 +57,8 @@ namespace gpstk
 
          // Check that the given epoch is within the available time limits.
          // We have to add a margin of 15 minutes (900 seconds).
-      if ( epoch <  (ephTime - 900.0) ||
-           epoch >= (ephTime + 900.0)   )
+      if ( epoch <  (ephTime - 1200.0) ||
+           epoch >= (ephTime + 1200.0)   )
       {
          InvalidRequest e( "Requested time is out of ephemeris data" );
          GPSTK_THROW(e);
